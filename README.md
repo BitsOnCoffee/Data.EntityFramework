@@ -1,2 +1,1 @@
-# Data.EntityFramework
-Entity Framework implementation of BitsOnCoffee.Data Library
+# BitsOnCoffee Data EntityFrameworkC# Class Library with Entity Framework implementation of [BitsOnCoffee.Data Library](https://github.com/BitsOnCoffee/Data) for Entity Framework##DocumentationFor documentation and examples see [Wiki](https://github.com/BitsOnCoffee/Data.EntityFramework/wiki)###InformationI'm adding a new functionality as I go along with my needs. So any pull requests are welcome!
