@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BitsOnCoffee.Data, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BitsOnCoffee.Data.1.0.0.1\lib\BitsOnCoffee.Data.dll</HintPath>
+    <Reference Include="BitsOnCoffee.Data, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BitsOnCoffee.Data.1.0.0.2\lib\BitsOnCoffee.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -44,7 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations">
-      <HintPath>..\packages\BitsOnCoffee.Data.1.0.0.1\lib\System.ComponentModel.DataAnnotations.dll</HintPath>
+      <HintPath>..\packages\BitsOnCoffee.Data.1.0.0.2\lib\System.ComponentModel.DataAnnotations.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Core" />
@@ -59,6 +59,7 @@
     <Compile Include="Context\EntityFrameworkContextBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\EntityFrameworkQueryBase.cs" />
+    <Compile Include="Queries\EntityFrameworkStoredProcedureQueryBase.cs" />
     <Compile Include="Repositories\EntityFrameworkRepository.cs" />
   </ItemGroup>
   <ItemGroup>

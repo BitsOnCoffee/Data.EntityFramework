@@ -1,1 +1,1 @@
-# BitsOnCoffee Data EntityFrameworkC# Class Library with Entity Framework implementation of [BitsOnCoffee.Data Library](https://github.com/BitsOnCoffee/Data) for Entity Framework##Changelog###1.0.0.0* Initial commit
+# BitsOnCoffee Data EntityFrameworkC# Class Library with Entity Framework implementation of [BitsOnCoffee.Data Library](https://github.com/BitsOnCoffee/Data) for Entity Framework##Changelog###1.0.0.3* Added support for select stored procedures###1.0.0.0* Initial commit

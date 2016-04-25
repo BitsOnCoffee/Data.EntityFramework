@@ -1,7 +1,6 @@
 ﻿using BitsOnCoffee.Data.EntityFramework.Context;
 using BitsOnCoffee.Data.Queries;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;

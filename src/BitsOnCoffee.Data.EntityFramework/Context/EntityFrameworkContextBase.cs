@@ -1,10 +1,12 @@
 ﻿using BitsOnCoffee.Data.Context;
+using BitsOnCoffee.Data.StoredProcedures;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Entity.Validation;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,21 @@ namespace BitsOnCoffee.Data.EntityFramework.Context
 			this.Configuration.UseDatabaseNullSemantics = true;
 
 			SetInitializer();
+		}
+		#endregion
+
+		#region CallStoredProcedure
+		public IList<TStoredProcedure> CallStoredProcedure<TStoredProcedure>(TStoredProcedure storedProcedure) where TStoredProcedure : StoredProcedureBase
+		{
+			List<SqlParameter> parameters = new List<SqlParameter>();
+			StringBuilder parameterNames = new StringBuilder();
+			foreach (var param in storedProcedure.Parameters)
+			{
+				parameterNames.AppendFormat(" {0}", param.Key);
+				parameters.Add(new SqlParameter(param.Key, param.Value));
+			}
+
+			return Database.SqlQuery<TStoredProcedure>(string.Format("{0}{1}", storedProcedure.GetType().Name, parameterNames.ToString()), parameters.ToArray()).ToList();
 		}
 		#endregion
 
